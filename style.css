@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: lightblue;
+}
+
+.main {
+    width:100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 30% 5% 3% 5% 30% 10%;
+    grid-template-columns: 10% 20% 1.5% 20% 2% 2% 25% 2% 10%;
+}
+
+.first{
+    grid-row-start: 2;
+    grid-row-end:4;
+    grid-column: 2;
+    border: white 2px solid;
+    padding: 10px;
+    height: auto;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-blue{
+    color: lightblue;
+}
+
+.second{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column: 4;
+    background: white;
+    padding: 10px;
+}
+
+.third{
+    grid-row-start: 5;
+    grid-row-end:7;
+    grid-column: 2;
+    background: white;
+    padding: 10px;
+}
+
+.fourth{
+    grid-row-start: 5;
+    grid-row-end:7;
+    grid-column: 4;
+    border: white 2px solid;
+    padding: 10px;
+}
+
+.fifth{
+    padding: 5px;
+    background: white;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 6;
+    grid-column-end: 8;
+}
+
+.sixth{
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    background: white;
+    padding: 5px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .main{
+        width:100%;
+        height: 100vh;
+        display: grid;
+    }
+
+    .first{
+        grid-column: 2/5;
+    }
+
+    .second{
+        grid-column: 6/10;
+    }
+
+    .third{
+        grid-column: 2/5;
+    }
+
+    .fourth{
+        grid-column: 6/10;
+    }
+
+    .fifth{
+        height: 40vh;
+        grid-column: 2/9;
+        grid-row: 8/11;
+    }
+
+    .sixth{
+        height: 40vh;
+        grid-column: 3/10;
+        grid-row: 10/13;
+    }
+}
+
+@media (max-width: 600px) {
+    .main{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+
+    .fifth{
+        height: 40vh;
+        margin-right: 50px;
+    }
+
+    .sixth{
+        height: 40vh;
+        margin-left: 50px;
+        margin-top: -80px;
+    }
+}
